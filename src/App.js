@@ -1,11 +1,12 @@
 import './App.css';
-import useWindowDimensions from './windowChange';
-import HtmlView from './HtmlView';
+import HtmlView from './components/HtmlView';
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
 export default function App() {
-  const { width } = useWindowDimensions();
   return (
-    <>
-      <HtmlView width={width} />
-    </>
+    <Provider store={store}>
+      <HtmlView />
+    </Provider>
   )
 }

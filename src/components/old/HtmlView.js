@@ -1,10 +1,9 @@
 import React from "react";
-import sampleData from './data_sample.json';
+import sampleData from '../../data_sample.json';
 
 
 export default function HtmlView({ width }) {
     const { data, rootNodeId } = sampleData;
-    console.log("width", width)
     let htmlView, elemArr = [], tempElem;
     Object.entries(data).map(([key, value]) => {
         //console.log("key, value", key, value)
